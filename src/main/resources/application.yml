@@ -1,5 +1,8 @@
 server:
   port: 80
+  netty:
+    connection-timeout: 10
+
 
 logging:
   level:
@@ -17,6 +20,7 @@ management:
 
 netty:
   websocket:
+
     # Websocket服务端口
     port: 1024
     # 绑定的网卡
