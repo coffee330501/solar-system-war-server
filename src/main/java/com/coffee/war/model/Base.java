@@ -1,9 +1,5 @@
 package com.coffee.war.model;
 
-import com.coffee.war.Enum.Director;
-
-import java.util.Arrays;
-
 /**
  * @author objcfeng
  * @description 基础实体
@@ -17,12 +13,12 @@ public class Base {
   //速度
   private double velocity;
   //方向
-  private Director director;
+  private int[] director;
 
   public Base() {
   }
 
-  public Base(int[] position, double mass, double velocity, Director director) {
+  public Base(int[] position, double mass, double velocity, int[] director) {
     this.position = position;
     this.mass = mass;
     this.velocity = velocity;
@@ -53,21 +49,12 @@ public class Base {
     this.velocity = velocity;
   }
 
-  public Director getDirector() {
+  public int[] getDirector() {
     return director;
   }
 
-  public void setDirector(Director director) {
+  public void setDirector(int[] director) {
     this.director = director;
   }
 
-  @Override
-  public String toString() {
-    return "Base{" +
-            "position=" + Arrays.toString(position) +
-            ", mass=" + mass +
-            ", velocity=" + velocity +
-            ", director=" + director +
-            '}';
-  }
 }
